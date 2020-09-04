@@ -1,0 +1,42 @@
+SpringMVC
+1. pom.xml : ojdbc6(+repository), mybatis, mybatis-spring,commons-dbcp,spring-orm
+2. web.xml : applicationContext.xml, mapping, encoding filter
+3. /WEB-INF/spring/sqls/test.sql
+4. dto, dao, biz, controller
+5. src/main/resources/mybatis/board-mapper.xml & db.properties
+6. /WEB-INF/spring/sqls/config.xml
+7. servlet-context, applicationContext
+
+
+
+_filter
+8. com/mvc/upgrade/common/filter/logFilter(impl javax.servlet.Filter)
+9. web.xml: filter
+
+_Aop
+10.pom.xml: aspectj w, aspectjrt
+11.com/mvc/upgrade/common/aop/LogAop
+12.WEB-INF/spring/appServlet/aop-context.xml
+13.web.xml: aop-context 추가(init-param)
+14.src/main/resources/log4j.xml(logger추가)
+
+_login
+1. jackson 추가
+2. WEB-INF/spring/sql/test.sql
+3. dto, dao, biz, controller
+4. src/main/resource/mybatis/member-mapper.xml
+5. WEB-INF/spring/sqls/config.xml
+
+_intercepter
+1. com/mvc/upgrade/common/interceptor/LoginInterceptor(imp HandlerInterceptor)
+2, servlet -context.xml
+
+
+_security
+pox.xml: spring-sequrity-web //spring-security-config, spring-security-taglib
+/WEB-INF/spring/appServlet/security-context.xml
+web.xml: security-context 추가
+dao, biz, controller
+mapper
+
+
